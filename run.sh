@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e -x
 mkdir -p originalData
 if [ ! -f originalData/uniprot_humanProteinList.fasta ]; then
