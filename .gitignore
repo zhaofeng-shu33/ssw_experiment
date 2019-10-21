@@ -1,0 +1,7 @@
+example_cpp
+example_c
+*.o
+*.so
+*.pyc
+proteinPartitions
+ssw_test
