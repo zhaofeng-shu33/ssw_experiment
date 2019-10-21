@@ -7,4 +7,5 @@ if [ ! -f originalData/uniprot_humanProteinList.fasta ]; then
   gunzip uniprot_humanProteinList.fasta.gz
 fi
 cd ../lambdaPackage
+mkdir -p proteinPartitions
 python partitionProteins.py 
