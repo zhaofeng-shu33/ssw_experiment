@@ -10,7 +10,7 @@ def work(n):
     count=0
     for i in range(1,n+1):
         for j in range(i,n+1):
-            cmd="./ssw_test -pl proteinPartitions/partition%d.fasta proteinPartitions/partition%d.fasta  ./BLOSUM62 -o 10 -e 1 > /dev/null"%(i,j)
+            cmd="./ssw_test -pl proteinPartitions/partition%d.fasta proteinPartitions/partition%d.fasta  ./BLOSUM62 -o 10 -e 1 > /dev/null 2>1&"%(i,j)
             f.write("run partition%d.fasta partition%d.fasta"%(i,j))
             output=os.popen(cmd)
             print(output.read().strip())
