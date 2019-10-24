@@ -1,0 +1,5 @@
+job1:
+  tags:
+  - bcm
+  script:
+  - bash run.sh
