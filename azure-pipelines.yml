@@ -1,12 +1,13 @@
 # Python
-
 trigger:
 - master
-
-pool:
-  vmImage: 'ubuntu-latest'
-steps:
-- task: UsePythonVersion@0
-  inputs:
-    versionSpec: '3.6'
-- script: ./run.sh
+jobs:
+- job: runJob
+  timeoutInMinutes: 3600 
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.6'
+  - script: ./run.sh

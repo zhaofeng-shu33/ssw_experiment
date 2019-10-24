@@ -1,5 +1,7 @@
 job1:
   tags:
   - bcm
+  only:
+  - master
   script:
   - bash run.sh
