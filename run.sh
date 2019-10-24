@@ -13,6 +13,6 @@ cd ../ssw
 make
 cp ssw_test ../lambdaPackage/
 cd ../lambdaPackage
-python run_local.py 20
+python run_local.py
 cat log.txt 
 
