@@ -12,7 +12,7 @@ python partitionProteins.py
 cd ../ssw
 make
 cp ssw_test ../lambdaPackage/
-if [ "$#" -ne 1 ]; then
+if [ "$#" -ne 0 ]; then
   cd ..
 else
   cd ../lambdaPackage
