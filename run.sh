@@ -12,7 +12,11 @@ python partitionProteins.py
 cd ../ssw
 make
 cp ssw_test ../lambdaPackage/
-cd ../lambdaPackage
-python run_local.py
-cat log.txt 
+if [ "$#" -ne 1 ]; then
+  cd ..
+else
+  cd ../lambdaPackage
+  python run_local.py
+  cat log.txt
+fi
 
