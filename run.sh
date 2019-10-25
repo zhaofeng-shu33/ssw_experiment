@@ -13,10 +13,13 @@ cd ../ssw
 make
 cp ssw_test ../lambdaPackage/
 cd ../lambdaPackage
+# ./run.sh with at least one parameter
 if [ "$#" -ne 0 ]; then
   zip -r upload.zip *
 else
-  python run_local.py
-  cat log.txt
+  export AWS_DEFAULT_REGION=us-east-2
+  cd ../client
+  pip install boto3
+  python minimal_align_client.py
 fi
 
