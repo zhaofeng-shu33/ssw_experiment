@@ -4,10 +4,13 @@ script:
 deploy:
   provider: lambda
   function_name: "ssw"
-  region: "us-east-1"
+  region: "us-east-2"
   role: "arn:aws:iam::369401945610:role/service-role/sequence_alignment-role-ruszb1hp"
   runtime: "python3.7"
-  handler_name: "lambda_function.handler"
+  memory_size: 1088
+  timeout: 180
+  module_name: "lambda_function"
+  handler_name: "handler"
   zip: "lambdaPackage/upload.zip"
   on:
     branch: "dev"
