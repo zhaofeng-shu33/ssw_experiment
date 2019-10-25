@@ -12,10 +12,10 @@ python partitionProteins.py
 cd ../ssw
 make
 cp ssw_test ../lambdaPackage/
+cd ../lambdaPackage
 if [ "$#" -ne 0 ]; then
-  cd ..
+  zip -r upload.zip *
 else
-  cd ../lambdaPackage
   python run_local.py
   cat log.txt
 fi
