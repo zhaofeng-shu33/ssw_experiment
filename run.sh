@@ -25,6 +25,7 @@ else
     cd ../client
     pip install -r requirements.txt
     mkdir -p ./performanceData/concurrency1000/trial3/
+    mv ../lambdaPackage/proteinPartitions ./
     python metrics_align_client.py
   fi
 fi
