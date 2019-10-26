@@ -91,7 +91,7 @@ def recordPerformanceMetrics(internalTimes, externalTimes, concurrencyLimit, met
     externalCompletionTime = []
     tasks = []
     counter = 1
-    totalPartitions = 41
+    totalPartitions = TOTAL_PARTITIONS
     pathlib.Path(metricsPath).mkdir(parents=True, exist_ok=True)
 
     taskSizesCold = []
