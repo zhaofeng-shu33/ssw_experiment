@@ -13,10 +13,18 @@ cd ../ssw
 make
 cp ssw_test ../lambdaPackage/
 cd ../lambdaPackage
+# ./run.sh with at least one parameter
 if [ "$#" -ne 0 ]; then
-  zip -r upload.zip *
+  zip -r upload.zip * # travis
 else
-  mkdir -p results
-  python alignProteins.py 2>&1 | tee align.log
+  if [ -z "$Agent.MachineName" ]; then # local
+    mkdir -p results
+    python alignProteins.py 2>&1 | tee align.log
+  else # azure pipelines
+    export AWS_DEFAULT_REGION=us-east-2
+    cd ../client
+    pip install boto3
+    python minimal_align_client.py
+  fi
 fi
 
