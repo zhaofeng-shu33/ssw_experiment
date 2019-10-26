@@ -2,13 +2,10 @@
 A client for performing parallelzed SSW using AWS Lambda which
 also records various metrics, downloads and checks result files as well as create graphs.
 """
-lambdaName = r"<AWS Lambda ARN>" #The ARN of the AWS Lambda function
-sqsQueueUrl = r"<SQS Queue Url>" #The URL of the AWS SQS Queue
-s3ResultsBucket = r"alignment-results" #The bucket name of the AWS S3 Bucket
 # verifyResults - Whether ssw alignments from AWS Lambda should be checked against local alignment scores.
 # If you enable this you will also need to make sure that the alignment scores are available locally. See more in main().
-verifyResults = False 
-
+verifyResults = False
+from client_config import lambdaName, sqsQueueUrl, s3ResultsBucket
 import lambda_client as lc
 import pathlib
 import matplotlib.pyplot as plt

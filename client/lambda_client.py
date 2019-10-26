@@ -2,9 +2,12 @@
 Contains code for the client which sets up the tasks and launches Lambdas.
 """
 import json
-import boto3
 import time
 import threading
+
+import boto3
+
+from client_config import lambdaName, sqsQueueUrl, s3ResultsBucket
 
 class Task:
     """
