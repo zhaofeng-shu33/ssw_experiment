@@ -5,7 +5,7 @@ also records various metrics, downloads and checks result files as well as creat
 # verifyResults - Whether ssw alignments from AWS Lambda should be checked against local alignment scores.
 # If you enable this you will also need to make sure that the alignment scores are available locally. See more in main().
 verifyResults = False
-from client_config import lambdaName, sqsQueueUrl, s3ResultsBucket
+from client_config import lambdaName, sqsQueueUrl, s3ResultsBucket, TOTAL_PARTITIONS
 import lambda_client as lc
 import pathlib
 import matplotlib.pyplot as plt
@@ -17,7 +17,7 @@ import boto3
 from filecmp import dircmp
 
 def createTasks():
-    totalPartitions = 41
+    totalPartitions = TOTAL_PARTITIONS
     tasks = set()
     for i in range(1, totalPartitions + 1):
         for j in range(i, totalPartitions + 1):
@@ -74,7 +74,7 @@ def cleanup(s3Bucket, queueUrl):
             Bucket=s3Bucket,
             Key=object.key
         )
-    sqsClient = boto3.client("sqs") 
+    sqsClient = boto3.client("sqs")
     sqsClient.purge_queue(
         QueueUrl=queueUrl
     )

@@ -7,8 +7,6 @@ import threading
 
 import boto3
 
-from client_config import lambdaName, sqsQueueUrl, s3ResultsBucket
-
 class Task:
     """
     A single task to be executed on Lambda.
