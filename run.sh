@@ -24,7 +24,8 @@ else
     export AWS_DEFAULT_REGION=us-east-2
     cd ../client
     pip install boto3
-    python minimal_align_client.py
+    mkdir -p ./performanceData/concurrency1000/trial3/
+    python metrics_align_client.py
   fi
 fi
 

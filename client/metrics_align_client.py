@@ -5,7 +5,7 @@ also records various metrics, downloads and checks result files as well as creat
 # verifyResults - Whether ssw alignments from AWS Lambda should be checked against local alignment scores.
 # If you enable this you will also need to make sure that the alignment scores are available locally. See more in main().
 verifyResults = False
-from client_config import lambdaName, sqsQueueUrl, s3ResultsBucket, TOTAL_PARTITIONS
+from client_config import lambdaName, sqsQueueUrl, s3ResultsBucket, TOTAL_PARTITIONS, TRIAL_NUM
 import lambda_client as lc
 import pathlib
 import matplotlib.pyplot as plt
@@ -225,7 +225,7 @@ def recordPerformanceMetrics(internalTimes, externalTimes, concurrencyLimit, met
     # plt.savefig(metricsPath + "ObservedTimeVsTaskSize.png")
 
 def main():
-    for i in range(0, 3):
+    for i in range(0, TRIAL_NUM):
         trialNumber = 1 + i
         print("Starting trial", trialNumber)
 

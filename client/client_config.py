@@ -6,3 +6,8 @@ if os.environ.get('partition'):
     TOTAL_PARTITIONS = int(os.environ.get('partition'))
 else:
     TOTAL_PARTITIONS = 1
+
+if os.environ.get('trial'):
+    TRIAL_NUM = int(os.environ.get('trial'))
+else:
+    TRIAL_NUM = 1
