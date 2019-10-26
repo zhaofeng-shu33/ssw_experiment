@@ -1,6 +1,4 @@
 # Python
-trigger:
-- master
 jobs:
 - job: runJob
   timeoutInMinutes: 3600 
