@@ -24,7 +24,7 @@ else
     export AWS_DEFAULT_REGION=us-east-2
     cd ../client
     pip install -r requirements.txt
-    mkdir -p ./performanceData/concurrency1000/trial3/
+    mkdir -p ./performanceData/concurrency1000/trial1/
     mv ../lambdaPackage/proteinPartitions ./
     python metrics_align_client.py
   fi

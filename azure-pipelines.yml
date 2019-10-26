@@ -14,5 +14,5 @@ jobs:
       AWS_SECRET_ACCESS_KEY: $(AWS_SECRET_ACCESS_KEY)
   - task: PublishBuildArtifacts@1
     inputs:
-      pathtoPublish: './client/performanceData/concurrency1000/trial3/'
+      pathtoPublish: './client/performanceData/concurrency1000/trial1/'
       artifactName: ExperimentResults

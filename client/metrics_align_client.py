@@ -4,7 +4,7 @@ also records various metrics, downloads and checks result files as well as creat
 """
 # verifyResults - Whether ssw alignments from AWS Lambda should be checked against local alignment scores.
 # If you enable this you will also need to make sure that the alignment scores are available locally. See more in main().
-verifyResults = False
+shouldverifyResults = False
 from client_config import lambdaName, sqsQueueUrl, s3ResultsBucket, TOTAL_PARTITIONS, TRIAL_NUM
 import lambda_client as lc
 import pathlib
@@ -240,7 +240,7 @@ def main():
         # To verify results you will first need to obtain the SSW alignments by running SSW locally.
         # The resulting alignments need to be placed in ./results_basis.
         # You can obtain SSW alignments by running the scripts inside ./examples/proteinSequenceAlignment/preprocessing/
-        if verifyResults:
+        if shouldverifyResults:
 	        trialResultsDir = path + "results/"
 	        basisResultsDir = "./results_basis/"
 	        downloadResults(s3ResultsBucket, trialResultsDir)
