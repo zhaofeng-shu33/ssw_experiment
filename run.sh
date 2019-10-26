@@ -17,7 +17,7 @@ cd ../lambdaPackage
 if [ "$#" -ne 0 ]; then
   zip -r upload.zip * # travis
 else
-  if [ -z "$Agent.MachineName" ]; then # local
+  if [ -z "$AZURE" ]; then # local
     mkdir -p results
     python alignProteins.py 2>&1 | tee align.log
   else # azure pipelines
