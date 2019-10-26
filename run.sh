@@ -16,7 +16,7 @@ cd ../lambdaPackage
 if [ "$#" -ne 0 ]; then
   zip -r upload.zip *
 else
-  python run_local.py
-  cat log.txt
+  mkdir -p results
+  python alignProteins.py 2>&1 | tee align.log
 fi
 

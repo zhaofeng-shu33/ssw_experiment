@@ -1,7 +1,10 @@
 job1:
   tags:
-  - bcm
+  - ssw-experiment
   only:
   - master
   script:
   - bash run.sh
+  artifacts:
+    paths:
+      - lambdaPackage/results/alignment* 
