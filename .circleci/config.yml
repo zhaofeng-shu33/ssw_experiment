@@ -12,7 +12,8 @@ jobs:
       - run: cd client
       - run: wget https://gitlab.com/zhaofeng-shu33/ssw_experiment/-/jobs/333800685/artifacts/download -O artifacts.zip
       - run: unzip artifacts.zip
-      - run: python verify_result.py && cat verification.txt      
+      - run: python verify_result.py
+      - run: cat verification.txt
 workflows:
   version: 2
   experiment:
