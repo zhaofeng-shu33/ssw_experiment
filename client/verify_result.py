@@ -9,7 +9,7 @@ def downloadResults(s3Bucket, resultsPath):
     my_bucket = boto3.resource('s3').Bucket(s3Bucket)
 
     for object in my_bucket.objects.all():
-        my_bucket.download_file(object.key, resultsPath + 'alignmnet' + object.key)
+        my_bucket.download_file(object.key, resultsPath + 'alignment' + object.key)
 
 def areFoldersDifferent(dir1, dir2):
     dcmp = dircmp(dir1, dir2)
