@@ -35,11 +35,8 @@ def cleanup(s3Bucket, queueUrl):
     )
 
 if __name__ == '__main__':
-    concurrencyLimit = 1000
-    trialNumber = 1
-    path = r"./performanceData/concurrency" + str(concurrencyLimit) + "/trial" + str(trialNumber) + "/"
-    trialResultsDir = path + "results/"
-    basisResultsDir = "./results_basis/"
+    trialResultsDir = "./results/"
+    basisResultsDir = "./lambdaPackage/results/"
     downloadResults(s3ResultsBucket, trialResultsDir)
-    verifyResults(basisResultsDir, trialResultsDir, path)
+    verifyResults(basisResultsDir, trialResultsDir, './')
     cleanup(s3ResultsBucket, sqsQueueUrl)
