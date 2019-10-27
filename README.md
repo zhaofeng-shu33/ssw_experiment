@@ -14,4 +14,4 @@ See the paper [Leveraging Serverless Computing to Improve Performance for Sequen
 
 ## Limitations
 * The client user account and lambda role are created manually.
-* Binding to a target server, not configurable.
+* Binding to a target aws service endpoint, not configurable.
