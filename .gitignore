@@ -1,3 +1,6 @@
+*.zip
+client/lambdaPackage
+client/results
 log.txt
 originalData
 example_cpp
