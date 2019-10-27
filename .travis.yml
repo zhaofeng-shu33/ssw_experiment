@@ -1,4 +1,7 @@
 language: generic
+cache:
+  directories:
+  - originalData
 script:
   - ./run.sh 1
 deploy:

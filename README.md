@@ -1,4 +1,7 @@
 [![Build Status](https://dev.azure.com/zhaofengshu33/ssw_experiment/_apis/build/status/zhaofeng-shu33.ssw_experiment?branchName=master)](https://dev.azure.com/zhaofengshu33/ssw_experiment/_build/latest?definitionId=1&branchName=master)
+[![Gitlab]]((https://example.gitlab.com/zhaofeng-shu33/ssw_experiment/badges/master/pipeline.svg))
+[![Build Status](https://travis-ci.com/zhaofeng-shu33/ssw_experiment.svg?branch=master)](https://travis-ci.com/zhaofeng-shu33/ssw_experiment)
+[![CircleCI](https://circleci.com/gh/zhaofeng-shu33/ssw_experiment.svg?style=svg)](https://circleci.com/gh/zhaofeng-shu33/ssw_experiment)
 
 # SSW Experiment on DevOps
 
@@ -12,4 +15,4 @@ See the paper [Leveraging Serverless Computing to Improve Performance for Sequen
 
 ## Limitations
 * The client user account and lambda role are created manually.
-* Binding to a target server, not configurable.
+* Binding to a target aws service endpoint, not configurable.

@@ -1,0 +1,17 @@
+version: 2.1
+executors:
+  my-executor:
+    docker:
+      - image: circleci/python:3.7.3
+jobs:
+  verify:
+    executor: my-executor
+    steps:
+      - checkout
+      - run: bash .circleci/verify.sh
+workflows:
+  version: 2
+  experiment:
+    jobs:
+      - verify
+
