@@ -2,7 +2,7 @@ from filecmp import dircmp
 import boto3
 import pathlib
 
-from client_config import s3ResultsBucket
+from client_config import s3ResultsBucket, sqsQueueUrl
 
 def downloadResults(s3Bucket, resultsPath):
     pathlib.Path(resultsPath).mkdir(parents=True, exist_ok=True)
