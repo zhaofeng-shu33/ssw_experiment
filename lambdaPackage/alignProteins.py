@@ -21,6 +21,6 @@ def main():
                   ".fasta ./proteinPartitions/partition" + str(j) + ".fasta ./BLOSUM62 -o 10 -e 1 -l  > ./results/alignment" +
                   str(i) + "-" + str(j), stdout=None, stderr=subprocess.PIPE, shell=True).communicate()
                 if err:
-                    print(err)
+                    print(err, file=sys.stderr)
 
 main()
