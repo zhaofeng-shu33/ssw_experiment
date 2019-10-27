@@ -41,4 +41,4 @@ if __name__ == '__main__':
     basisResultsDir = "./lambdaPackage/results/"
     downloadResults(s3ResultsBucket, trialResultsDir)
     verifyResults(basisResultsDir, trialResultsDir, './')
-    cleanup(s3ResultsBucket, sqsQueueUrl)
+    # cleanup(s3ResultsBucket, sqsQueueUrl)
