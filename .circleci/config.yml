@@ -8,8 +8,8 @@ jobs:
     executor: my-executor
     steps:
       - checkout
-      - run: pip install boto3     
-      - run: cd client && wget https://gitlab.com/zhaofeng-shu33/ssw_experiment/-/jobs/333800685/artifacts/download -o artifacts.zip
+      - run: pip install --user boto3     
+      - run: cd client && wget https://gitlab.com/zhaofeng-shu33/ssw_experiment/-/jobs/333800685/artifacts/download -O artifacts.zip
       - run: unzip artifacts.zip
       - run: python verify_result.py && cat verification.txt      
 workflows:
