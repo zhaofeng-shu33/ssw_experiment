@@ -245,7 +245,7 @@ def main():
 	        basisResultsDir = "./results_basis/"
 	        downloadResults(s3ResultsBucket, trialResultsDir)
 	        verifyResults(basisResultsDir, trialResultsDir, path)
-        cleanup(s3ResultsBucket, sqsQueueUrl)
+            cleanup(s3ResultsBucket, sqsQueueUrl)
     print("Done")
 
 main()

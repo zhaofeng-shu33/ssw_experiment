@@ -7,7 +7,7 @@ s3ResultsBucket = r"ssw-azure-pipelines" #The bucket name of the AWS S3 Bucket
 if os.environ.get('partition'):
     TOTAL_PARTITIONS = int(os.environ.get('partition'))
 else:
-    TOTAL_PARTITIONS = 1
+    TOTAL_PARTITIONS = 41
 
 if os.environ.get('trial'):
     TRIAL_NUM = int(os.environ.get('trial'))
