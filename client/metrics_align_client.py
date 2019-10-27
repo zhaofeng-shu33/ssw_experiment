@@ -241,10 +241,10 @@ def main():
         # The resulting alignments need to be placed in ./results_basis.
         # You can obtain SSW alignments by running the scripts inside ./examples/proteinSequenceAlignment/preprocessing/
         if shouldverifyResults:
-	        trialResultsDir = path + "results/"
-	        basisResultsDir = "./results_basis/"
-	        downloadResults(s3ResultsBucket, trialResultsDir)
-	        verifyResults(basisResultsDir, trialResultsDir, path)
+            trialResultsDir = path + "results/"
+            basisResultsDir = "./results_basis/"
+            downloadResults(s3ResultsBucket, trialResultsDir)
+            verifyResults(basisResultsDir, trialResultsDir, path)
             cleanup(s3ResultsBucket, sqsQueueUrl)
     print("Done")
 

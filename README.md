@@ -1,4 +1,6 @@
 [![Build Status](https://dev.azure.com/zhaofengshu33/ssw_experiment/_apis/build/status/zhaofeng-shu33.ssw_experiment?branchName=master)](https://dev.azure.com/zhaofengshu33/ssw_experiment/_build/latest?definitionId=1&branchName=master)
+[![Gitlab]]((https://example.gitlab.com/zhaofeng-shu33/ssw_experiment/badges/master/pipeline.svg))
+[![Build Status](https://travis-ci.com/zhaofeng-shu33/ssw_experiment.svg?branch=master)](https://travis-ci.com/zhaofeng-shu33/ssw_experiment)
 
 # SSW Experiment on DevOps
 
