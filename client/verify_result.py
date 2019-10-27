@@ -2,6 +2,8 @@ from filecmp import dircmp
 import boto3
 import pathlib
 
+from client_config import s3ResultsBucket
+
 def downloadResults(s3Bucket, resultsPath):
     pathlib.Path(resultsPath).mkdir(parents=True, exist_ok=True)
     my_bucket = boto3.resource('s3').Bucket(s3Bucket)
