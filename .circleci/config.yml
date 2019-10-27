@@ -14,4 +14,7 @@ workflows:
   experiment:
     jobs:
       - verify
+          filters:
+             branches:
+               only: master
 
