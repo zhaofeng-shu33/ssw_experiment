@@ -1,5 +1,5 @@
 [![Build Status](https://dev.azure.com/zhaofengshu33/ssw_experiment/_apis/build/status/zhaofeng-shu33.ssw_experiment?branchName=master)](https://dev.azure.com/zhaofengshu33/ssw_experiment/_build/latest?definitionId=1&branchName=master)
-[![Gitlab]((https://gitlab.com/zhaofeng-shu33/ssw_experiment/badges/master/pipeline.svg)](https://gitlab.com/zhaofeng-shu33/ssw_experiment)
+[![Gitlab](https://gitlab.com/zhaofeng-shu33/ssw_experiment/badges/master/pipeline.svg)](https://gitlab.com/zhaofeng-shu33/ssw_experiment)
 [![Build Status](https://travis-ci.com/zhaofeng-shu33/ssw_experiment.svg?branch=master)](https://travis-ci.com/zhaofeng-shu33/ssw_experiment)
 [![CircleCI](https://circleci.com/gh/zhaofeng-shu33/ssw_experiment.svg?style=svg)](https://circleci.com/gh/zhaofeng-shu33/ssw_experiment)
 
