@@ -7,7 +7,7 @@ This assumes:
 To log errors you can run me with:
 python3 -u alignProteins.py 2>&1 | tee align.log
 """
-
+import sys
 import time
 import subprocess
 fileCount = 41
