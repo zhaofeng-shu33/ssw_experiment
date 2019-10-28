@@ -16,4 +16,4 @@ deploy:
   handler_name: "handler"
   zip: "lambdaPackage/upload.zip"
   on:
-    tags: true
+    branch: release
