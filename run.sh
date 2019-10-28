@@ -19,7 +19,7 @@ if [ "$#" -ne 0 ]; then
 else
   if [ -z "$AZURE" ]; then # local
     mkdir -p results
-    python alignProteins.py 2>/dev/null | tee align.log
+    python3 alignProteins.py 2>/dev/null | tee align.log
   else # azure pipelines
     export AWS_DEFAULT_REGION=us-east-2
     cd ../client
