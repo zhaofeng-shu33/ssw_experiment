@@ -1,6 +1,6 @@
 # Python
 trigger:
-- master
+- special
 jobs:
 - job: runJob
   timeoutInMinutes: 3600 

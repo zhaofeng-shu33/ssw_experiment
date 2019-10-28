@@ -16,5 +16,5 @@ workflows:
       - verify:
           filters:
              branches:
-               only: master
+               only: special
 
